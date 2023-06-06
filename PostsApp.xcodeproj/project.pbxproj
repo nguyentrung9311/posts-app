@@ -28,8 +28,9 @@
 		22EB68302A2F77F0005E00F4 /* UIInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB682A2A2F77F0005E00F4 /* UIInputText.swift */; };
 		22EB68312A2F77F0005E00F4 /* AuthApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB682C2A2F77F0005E00F4 /* AuthApiService.swift */; };
 		22EB68322A2F77F0005E00F4 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB682E2A2F77F0005E00F4 /* AuthRepository.swift */; };
-		22EB683A2A2F78D7005E00F4 /* PostsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68392A2F78D7005E00F4 /* PostsAppTests.swift */; };
+		22EB68422A2F8C44005E00F4 /* TestLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68412A2F8C44005E00F4 /* TestLoginPresenter.swift */; };
 		B56A00B5ADCA92F5625439FE /* Pods_PostsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41125E7B6561BC9ABF65C21 /* Pods_PostsApp.framework */; };
+		DAB7C3D5E00586B159AA9BB2 /* PostsAppTests-PostsAppMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */; };
 		E03602930B73C22219532EAE /* Pods_PostsApp_PostsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893C6FE02AC0DFCB3BA317E2 /* Pods_PostsApp_PostsAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,13 +69,15 @@
 		22EB682C2A2F77F0005E00F4 /* AuthApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApiService.swift; sourceTree = "<group>"; };
 		22EB682E2A2F77F0005E00F4 /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		22EB68372A2F78D7005E00F4 /* PostsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22EB68392A2F78D7005E00F4 /* PostsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAppTests.swift; sourceTree = "<group>"; };
+		22EB68402A2F8C43005E00F4 /* PostsAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PostsAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		22EB68412A2F8C44005E00F4 /* TestLoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLoginPresenter.swift; sourceTree = "<group>"; };
 		2BEAE9234010F7B842812AAA /* Pods-PostsApp-PostsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp-PostsAppTests.release.xcconfig"; path = "Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C0F60B60A2BD5F4752947CC /* Pods-PostsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp.release.xcconfig"; path = "Target Support Files/Pods-PostsApp/Pods-PostsApp.release.xcconfig"; sourceTree = "<group>"; };
 		6552686EDB4B328076D4D453 /* Pods-PostsApp-PostsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp-PostsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		893C6FE02AC0DFCB3BA317E2 /* Pods_PostsApp_PostsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsApp_PostsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41125E7B6561BC9ABF65C21 /* Pods_PostsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17FE08878517439B3FCC7CE /* Pods-PostsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp.debug.xcconfig"; path = "Target Support Files/Pods-PostsApp/Pods-PostsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "PostsAppTests-PostsAppMocks.generated.swift"; path = "MockingbirdMocks/PostsAppTests-PostsAppMocks.generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				22EB67F52A2F74BE005E00F4 /* Products */,
 				4AD594DFB62B29F2BDFA79C0 /* Pods */,
 				81A426A993E4C5AB53F66887 /* Frameworks */,
+				5EA39044790AF2F5FC608F57 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,7 +225,8 @@
 		22EB68382A2F78D7005E00F4 /* PostsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				22EB68392A2F78D7005E00F4 /* PostsAppTests.swift */,
+				22EB68412A2F8C44005E00F4 /* TestLoginPresenter.swift */,
+				22EB68402A2F8C43005E00F4 /* PostsAppTests-Bridging-Header.h */,
 			);
 			path = PostsAppTests;
 			sourceTree = "<group>";
@@ -234,8 +239,15 @@
 				6552686EDB4B328076D4D453 /* Pods-PostsApp-PostsAppTests.debug.xcconfig */,
 				2BEAE9234010F7B842812AAA /* Pods-PostsApp-PostsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5EA39044790AF2F5FC608F57 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
 		81A426A993E4C5AB53F66887 /* Frameworks */ = {
@@ -274,6 +286,7 @@
 			buildConfigurationList = 22EB683F2A2F78D7005E00F4 /* Build configuration list for PBXNativeTarget "PostsAppTests" */;
 			buildPhases = (
 				EA332EB37923E9B1BCC7F328 /* [CP] Check Pods Manifest.lock */,
+				87B62A4001D82C128198D540 /* Generate Mockingbird Mocks */,
 				22EB68332A2F78D7005E00F4 /* Sources */,
 				22EB68342A2F78D7005E00F4 /* Frameworks */,
 				22EB68352A2F78D7005E00F4 /* Resources */,
@@ -304,6 +317,7 @@
 					};
 					22EB68362A2F78D7005E00F4 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 22EB67F32A2F74BE005E00F4;
 					};
 				};
@@ -382,14 +396,34 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp/Pods-PostsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp/Pods-PostsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PostsApp/Pods-PostsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		87B62A4001D82C128198D540 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/PostsAppTests-PostsAppMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n\"${SRCROOT}/Pods/MockingbirdFramework/mockingbird\" generate --targets \"PostsApp\" --outputs \"${SRCROOT}/MockingbirdMocks/PostsAppTests-PostsAppMocks.generated.swift\"";
 		};
 		BE8D527127285CD09E56EA5C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -399,9 +433,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,7 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EB683A2A2F78D7005E00F4 /* PostsAppTests.swift in Sources */,
+				22EB68422A2F8C44005E00F4 /* TestLoginPresenter.swift in Sources */,
+				DAB7C3D5E00586B159AA9BB2 /* PostsAppTests-PostsAppMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +706,7 @@
 			baseConfigurationReference = 6552686EDB4B328076D4D453 /* Pods-PostsApp-PostsAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -674,6 +714,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.training.PostsAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PostsAppTests/PostsAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PostsApp";
@@ -685,6 +727,7 @@
 			baseConfigurationReference = 2BEAE9234010F7B842812AAA /* Pods-PostsApp-PostsAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -692,6 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.training.PostsAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PostsAppTests/PostsAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PostsApp";
