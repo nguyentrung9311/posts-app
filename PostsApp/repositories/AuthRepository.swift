@@ -14,9 +14,20 @@ protocol AuthRepository {
         success: ((LoginEntity) -> Void)?,
         failure: ((String?) -> Void)?
     )
+    
+    func register(
+        username: String,
+        password: String,
+        success: ((RegisterEntity) -> Void)?,
+        failure: ((String?) -> Void)?
+    )
 }
 
 class AuthRepositoryImpl: AuthRepository {
+    func register(username: String, password: String, success: ((RegisterEntity) -> Void)?, failure: ((String?) -> Void)?) {
+        authApiService.register(username: username, password: password, success: success, failure: failure)
+    }
+    
     var authApiService: AuthApiService
     
     init(authApiService: AuthApiService) {
