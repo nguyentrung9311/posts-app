@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TutorialCell" customModule="Posts_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="802"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="802"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlr-rX-Ylt">
+                        <rect key="frame" x="0.0" y="0.0" width="444" height="802"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-mE-AAS">
+                                <rect key="frame" x="0.0" y="0.0" width="444" height="529.33333333333337"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JE-yb-aEV">
+                                <rect key="frame" x="0.0" y="529.33333333333337" width="444" height="272.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Học là có việc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-7m-DKI">
+                                        <rect key="frame" x="20" y="79.666666666666629" width="404" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbO-lV-CAA">
+                                        <rect key="frame" x="20" y="190.66666666666663" width="110" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jbO-lV-CAA" secondAttribute="height" multiplier="110:47" id="HcV-Vx-9D9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Skip"/>
+                                        <connections>
+                                            <action selector="onSkipClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Bpu-PK-huo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TechMaster" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-Jl-etU">
+                                        <rect key="frame" x="20" y="19.999999999999996" width="404" height="39.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JdO-Jl-etU" firstAttribute="top" secondItem="5JE-yb-aEV" secondAttribute="top" constant="20" id="96R-ud-2R4"/>
+                                    <constraint firstItem="JdO-Jl-etU" firstAttribute="leading" secondItem="5JE-yb-aEV" secondAttribute="leading" constant="20" id="DU4-bH-c9b"/>
+                                    <constraint firstItem="jbO-lV-CAA" firstAttribute="width" secondItem="5JE-yb-aEV" secondAttribute="width" multiplier="0.247748" id="IuN-pg-U2T"/>
+                                    <constraint firstAttribute="trailing" secondItem="JdO-Jl-etU" secondAttribute="trailing" constant="20" id="LhH-rr-2gE"/>
+                                    <constraint firstItem="Na0-7m-DKI" firstAttribute="leading" secondItem="5JE-yb-aEV" secondAttribute="leading" constant="20" id="LuZ-5Y-pNd"/>
+                                    <constraint firstAttribute="bottom" secondItem="jbO-lV-CAA" secondAttribute="bottom" constant="35" id="dhm-ZV-7Z7"/>
+                                    <constraint firstItem="Na0-7m-DKI" firstAttribute="top" secondItem="JdO-Jl-etU" secondAttribute="bottom" constant="20" id="jIA-Ah-BEn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Na0-7m-DKI" secondAttribute="trailing" constant="20" id="mTq-of-YmJ"/>
+                                    <constraint firstItem="jbO-lV-CAA" firstAttribute="leading" secondItem="5JE-yb-aEV" secondAttribute="leading" constant="20" id="yfy-u2-zBG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fi7-mE-AAS" secondAttribute="trailing" id="6Yh-7d-ldB"/>
+                            <constraint firstItem="5JE-yb-aEV" firstAttribute="leading" secondItem="Rlr-rX-Ylt" secondAttribute="leading" id="8dP-DN-QXd"/>
+                            <constraint firstItem="5JE-yb-aEV" firstAttribute="top" secondItem="Fi7-mE-AAS" secondAttribute="bottom" id="H1r-SK-wwN"/>
+                            <constraint firstAttribute="trailing" secondItem="5JE-yb-aEV" secondAttribute="trailing" id="Iei-FS-IsG"/>
+                            <constraint firstItem="Fi7-mE-AAS" firstAttribute="height" secondItem="Rlr-rX-Ylt" secondAttribute="height" multiplier="0.66" id="Qfs-GD-oTI"/>
+                            <constraint firstItem="Fi7-mE-AAS" firstAttribute="leading" secondItem="Rlr-rX-Ylt" secondAttribute="leading" id="Vnk-fj-4oF"/>
+                            <constraint firstAttribute="bottom" secondItem="5JE-yb-aEV" secondAttribute="bottom" id="Yfg-Q8-6Sl"/>
+                            <constraint firstItem="Fi7-mE-AAS" firstAttribute="top" secondItem="Rlr-rX-Ylt" secondAttribute="top" id="ZZe-zY-mnE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Rlr-rX-Ylt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="J11-vQ-rYF"/>
+                <constraint firstItem="Rlr-rX-Ylt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gx3-hf-7bm"/>
+                <constraint firstAttribute="trailing" secondItem="Rlr-rX-Ylt" secondAttribute="trailing" id="kSt-1x-iMH"/>
+                <constraint firstAttribute="bottom" secondItem="Rlr-rX-Ylt" secondAttribute="bottom" id="qUX-Em-IYo"/>
+            </constraints>
+            <size key="customSize" width="444" height="802"/>
+            <connections>
+                <outlet property="btSkip" destination="jbO-lV-CAA" id="xq3-zy-GHg"/>
+                <outlet property="ivTutorial" destination="Fi7-mE-AAS" id="5et-0h-0wT"/>
+                <outlet property="lbContent" destination="Na0-7m-DKI" id="XOb-Ik-u14"/>
+                <outlet property="lbTitle" destination="JdO-Jl-etU" id="foi-4S-Fs8"/>
+            </connections>
+            <point key="canvasLocation" x="430.53435114503816" y="253.52112676056339"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tutorial_1" width="780" height="1044"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
