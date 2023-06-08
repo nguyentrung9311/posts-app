@@ -26,14 +26,26 @@ class LoginPresenterIml: LoginPresenter {
     
     func login(username: String, password: String) {
         if username.isEmpty {
-            controller.validateFailure(message: "Username is require")
-        } else {
-            authRepository.login(username: username, password: password) { loginEntity in
-                print("Success")
-            } failure: { error in
-                print(error)
-            }
-
+            controller.usernameInvalid(message: "Username is require")
+            return
+        } else if username.count < 6 {
+            controller.usernameInvalid(message: "Username length must be > 5")
+            return
+        }
+        
+        if password.isEmpty {
+            controller.passwordInvalid(message: "Password is require")
+            return
+        } else if password.count < 6 {
+            controller.passwordInvalid(message: "Password length must be > 5")
+            return
+        }
+        
+        controller.onStartLogin()
+        authRepository.login(username: username, password: password) { loginEntity in
+            self.controller.onLoginSuccess()
+        } failure: { error in
+            self.controller.onLoginFailure(error: error)
         }
     }
 }
