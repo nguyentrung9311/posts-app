@@ -37,9 +37,18 @@ class TutorialViewController: UIViewController, TutorialCellDelegate {
         if indexPath.row < 3 {
             cvTutorial.scrollRectToVisible(CGRect(x: view.bounds.width * CGFloat(indexPath.row), y: 0, width: view.bounds.width, height: view.bounds.height), animated: true)
         } else {
+            UserDefaultHelper.shared.tutorialCompleted = true
+            
             let loginVC = LoginViewController()
-            loginVC.modalPresentationStyle = .fullScreen
-            present(loginVC, animated: true)
+            
+            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+            window?.rootViewController = loginVC
+            window?.makeKeyAndVisible()
+            
+//            let nav = UINavigationController(rootViewController: loginVC)
+            
+//            loginVC.modalPresentationStyle = .fullScreen
+//            present(loginVC, animated: true)
         }
     }
 }

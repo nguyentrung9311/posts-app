@@ -22,6 +22,8 @@ protocol AuthApiService {
         success: ((RegisterEntity) -> Void)?,
         failure: ((String?) -> Void)?
     )
+    
+    func logout(token: String, success: (() -> Void)?, failure: ((String?) -> Void)?)
 }
 
 class AuthApiServiceImpl: AuthApiService {
@@ -47,7 +49,26 @@ class AuthApiServiceImpl: AuthApiService {
                 success?(entity)
                 break
             case .failure(let error):
-                failure?(error.localizedDescription)
+                if let data = response.data {
+                    print("Register error: \(String(data: data, encoding: .utf8) ?? "")")
+                }
+                failure?(error.errorDescription)
+                break
+            }
+        }
+    }
+    
+    func logout(token: String, success: (() -> Void)?, failure: ((String?) -> Void)?) {
+        AF.request(AuthRouter.logout).validate(statusCode: 200 ... 300).response { response in
+            switch response.result {
+            case .success(_):
+                success?()
+                break
+            case .failure(let error):
+                if let data = response.data {
+                    print("Logout error: \(String(data: data, encoding: .utf8) ?? "")")
+                }
+                failure?(error.errorDescription)
                 break
             }
         }

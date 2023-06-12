@@ -13,7 +13,7 @@ protocol RegisterDisplay {
     func confirmPasswordInvalid(message: String)
     func onStartRegister()
     func onRegisterFailure(error: String?)
-    func onRegisterSuccess()
+    func onRegisterSuccess(registerEntity: RegisterEntity)
 }
 
 class RegisterViewController: UIViewController {
@@ -96,11 +96,20 @@ extension RegisterViewController: RegisterDisplay {
     func onRegisterFailure(error: String?) {
         loadingView.isHidden = true
         print("Register failure: \(error ?? "")")
+        AuthHelper.shared.clear(key: AuthHelper.Keys.accessToken.rawValue)
     }
     
-    func onRegisterSuccess() {
+    func onRegisterSuccess(registerEntity: RegisterEntity) {
         loadingView.isHidden = true
         print("Register success")
+        if let accessToken = registerEntity.accessToken, !accessToken.isEmpty {
+            AuthHelper.shared.accessToken = accessToken
+            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+            window?.rootViewController = HomeViewController()
+            window?.makeKeyAndVisible()
+        } else {
+            AuthHelper.shared.accessToken = ""
+        }
     }
     
     

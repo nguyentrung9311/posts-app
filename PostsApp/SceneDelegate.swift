@@ -18,10 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
+        (UIApplication.shared.delegate as? AppDelegate)?.window = window
+        
         window?.windowScene = windowScene
-        let rootCV = TutorialViewController()
-        rootCV.modalPresentationStyle = .fullScreen
-        window?.rootViewController = rootCV
+        var rootVC: UIViewController!
+        if(UserDefaultHelper.shared.tutorialCompleted) {
+            if AuthHelper.shared.isLogged() {
+                rootVC = HomeViewController()
+            } else {
+                rootVC = LoginViewController()
+            }
+        } else {
+            rootVC = TutorialViewController()
+        }
+        
+        window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
     }
 

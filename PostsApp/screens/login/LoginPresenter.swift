@@ -47,7 +47,7 @@ class LoginPresenterIml: LoginPresenter {
         
         controller.onStartLogin()
         authRepository.login(username: username, password: password) { loginEntity in
-            self.controller.onLoginSuccess()
+            self.controller.onLoginSuccess(loginEntity: loginEntity)
         } failure: { error in
             self.controller.onLoginFailure(error: error)
         }

@@ -42,6 +42,7 @@ enum AuthRouter: URLRequestConvertible {
             request = try JSONEncoding.default.encode(request, with: parameters)
         case .logout:
             request = try URLEncoding.default.encode(request, with: nil)
+            request.setValue("Bearer \(AuthHelper.shared.accessToken)", forHTTPHeaderField: "Authorization")
         }
         request.timeoutInterval = 30
 

@@ -57,8 +57,8 @@ class RegisterPresenterIml: RegisterPresenter {
         }
         
         controller.onStartRegister()
-        authRepository.register(username: username, password: password) { loginEntity in
-            self.controller.onRegisterSuccess()
+        authRepository.register(username: username, password: password) { registerEntity in
+            self.controller.onRegisterSuccess(registerEntity: registerEntity)
         } failure: { error in
             self.controller.onRegisterFailure(error: error)
         }

@@ -5,6 +5,7 @@ target 'PostsApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
     pod 'Alamofire'
+    pod 'KeychainSwift', '~> 20.0'
     
   # Pods for PostsApp
     target 'PostsAppTests' do
