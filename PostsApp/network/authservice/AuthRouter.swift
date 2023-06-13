@@ -11,7 +11,7 @@ import Alamofire
 enum AuthRouter: URLRequestConvertible {
     case login(body: Parameters)
     case register(body: Parameters)
-    case logout
+    case logout(accessToken: String)
 
     var baseURL: URL {
         return URL(string: "https://learn-api-3t7z.onrender.com")!
@@ -40,9 +40,9 @@ enum AuthRouter: URLRequestConvertible {
         switch self {
         case .login(let parameters), .register(let parameters):
             request = try JSONEncoding.default.encode(request, with: parameters)
-        case .logout:
+        case .logout(let accessToken):
             request = try URLEncoding.default.encode(request, with: nil)
-            request.setValue("Bearer \(AuthHelper.shared.accessToken)", forHTTPHeaderField: "Authorization")
+            request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         }
         request.timeoutInterval = 30
 

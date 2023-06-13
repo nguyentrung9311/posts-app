@@ -11,7 +11,7 @@ class UserDefaultHelper {
     static let shared = UserDefaultHelper()
     private var standard = UserDefaults.standard
     
-    private enum Keys: String {
+    enum Keys: String {
         case tutorialCompleted
     }
     

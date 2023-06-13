@@ -6,6 +6,7 @@ target 'PostsApp' do
   use_frameworks!
     pod 'Alamofire'
     pod 'KeychainSwift', '~> 20.0'
+    pod "ESTabBarController-swift"
     
   # Pods for PostsApp
     target 'PostsAppTests' do

@@ -15,6 +15,7 @@ protocol HomeDelegate {
 
 class HomeViewController: UIViewController {
     var homePresenter: HomePresenter!
+    var rootNavigator: UINavigationController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeDelegate {
     func onStartLogout() {
         print("Start logout")
+        AuthHelper.shared.clear(key: AuthHelper.Keys.accessToken.rawValue)
     }
     
     func onLogoutFailure(error: String?) {
@@ -38,6 +40,19 @@ extension HomeViewController: HomeDelegate {
     
     func onLogoutSuccess() {
         print("Logout success")
+        if let navigationController = rootNavigator {
+            let loginVC = navigationController.viewControllers.first { viewContoller in
+                return viewContoller is LoginViewController
+            }
+            
+            if loginVC != nil {
+                navigationController.popToViewController(loginVC!, animated: true)
+            } else {
+                navigationController.pushViewController(LoginViewController(), animated: true)
+            }
+        } else {
+            print("Root navigator nil")
+        }
     }
     
     
