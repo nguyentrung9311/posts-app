@@ -71,7 +71,7 @@ extension LoginViewController: LoginDisplay {
         print("Login success")
         if let accessToken = loginEntity.accessToken, !accessToken.isEmpty {
             AuthHelper.shared.accessToken = accessToken
-            navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+            navigationController?.pushViewController(MainViewController(), animated: true)
         } else {
             AuthHelper.shared.accessToken = ""
         }

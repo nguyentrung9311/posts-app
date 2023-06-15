@@ -110,10 +110,7 @@ extension RegisterViewController: RegisterDisplay {
         print("Register success")
         if let accessToken = registerEntity.accessToken, !accessToken.isEmpty {
             AuthHelper.shared.accessToken = accessToken
-            navigationController?.pushViewController(MainTabBarViewController(), animated: true)
-//            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
-//            window?.rootViewController = HomeViewController()
-//            window?.makeKeyAndVisible()
+            navigationController?.pushViewController(MainViewController(), animated: true)
         } else {
             AuthHelper.shared.accessToken = ""
         }

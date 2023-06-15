@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var rootVC: UIViewController!
         if(UserDefaultHelper.shared.tutorialCompleted) {
             if AuthHelper.shared.isLogged() {
-                rootVC = MainTabBarViewController()
+                rootVC = MainViewController()
             } else {
                 rootVC = LoginViewController()
             }

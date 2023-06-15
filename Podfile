@@ -7,6 +7,7 @@ target 'PostsApp' do
     pod 'Alamofire'
     pod 'KeychainSwift', '~> 20.0'
     pod "ESTabBarController-swift"
+    pod 'Kingfisher', '~> 7.0'
     
   # Pods for PostsApp
     target 'PostsAppTests' do
