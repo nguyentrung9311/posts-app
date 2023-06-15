@@ -26,10 +26,6 @@ protocol AuthRepository {
 }
 
 class AuthRepositoryImpl: AuthRepository {
-    func register(username: String, password: String, success: ((RegisterEntity) -> Void)?, failure: ((String?) -> Void)?) {
-        authApiService.register(username: username, password: password, success: success, failure: failure)
-    }
-    
     var authApiService: AuthApiService
     
     init(authApiService: AuthApiService) {
@@ -42,6 +38,10 @@ class AuthRepositoryImpl: AuthRepository {
     
     func logout(accessToken: String, success: (() -> Void)?, failure: ((String?) -> Void)?) {
         authApiService.logout(accessToken: accessToken, success: success, failure: failure)
+    }
+    
+    func register(username: String, password: String, success: ((RegisterEntity) -> Void)?, failure: ((String?) -> Void)?) {
+        authApiService.register(username: username, password: password, success: success, failure: failure)
     }
 }
 
