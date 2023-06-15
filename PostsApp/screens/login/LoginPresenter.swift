@@ -20,30 +20,34 @@ class LoginPresenterIml: LoginPresenter {
         self.authRepository = authRepository
     }
     
-//    func validateForm() -> Bool {
-//        return false
-//    }
-    
-    func login(username: String, password: String) {
+    func validateForm(username: String, password: String) -> Bool {
+        var isValid = true
         if username.isEmpty {
             controller.usernameInvalid(message: "Username is require")
-            return
-        } else if username.count < 6 {
-            controller.usernameInvalid(message: "Username length must be > 5")
-            return
+            isValid = false
+        } else if !(6...40).contains(username.count) {
+            controller.usernameInvalid(message: "Username length must be >= 5 and <= 40")
+            isValid = false
         }
         
         if password.isEmpty {
             controller.passwordInvalid(message: "Password is require")
-            return
-        } else if password.count < 6 {
-            controller.passwordInvalid(message: "Password length must be > 5")
+            isValid = false
+        } else if !(6...40).contains(password.count) {
+            controller.passwordInvalid(message: "Password length must be >= 5 and <= 40")
+            isValid = false
+        }
+        return isValid
+    }
+    
+    func login(username: String, password: String) {
+        if !validateForm(username: username, password: password) {
             return
         }
         
         controller.onStartLogin()
         authRepository.login(username: username, password: password) { loginEntity in
-            self.controller.onLoginSuccess()
+            self.controller.onLoginSuccess(loginEntity: loginEntity)
         } failure: { error in
             self.controller.onLoginFailure(error: error)
         }

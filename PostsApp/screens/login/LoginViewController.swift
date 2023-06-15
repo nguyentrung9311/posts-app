@@ -12,7 +12,7 @@ protocol LoginDisplay {
     func passwordInvalid(message: String)
     func onStartLogin()
     func onLoginFailure(error: String?)
-    func onLoginSuccess()
+    func onLoginSuccess(loginEntity: LoginEntity)
 }
 
 class LoginViewController: UIViewController {
@@ -56,11 +56,20 @@ extension LoginViewController: LoginDisplay {
     func onLoginFailure(error: String?) {
         loadingView.isHidden = true
         print("Login failure: \(error ?? "")")
+        AuthHelper.shared.clear(key: AuthHelper.Keys.accessToken.rawValue)
     }
     
-    func onLoginSuccess() {
+    func onLoginSuccess(loginEntity: LoginEntity) {
         loadingView.isHidden = true
         print("Login success")
+        if let accessToken = loginEntity.accessToken, !accessToken.isEmpty {
+            AuthHelper.shared.accessToken = accessToken
+            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+            window?.rootViewController = HomeViewController()
+            window?.makeKeyAndVisible()
+        } else {
+            AuthHelper.shared.accessToken = ""
+        }
     }
     
     func onStartLogin() {

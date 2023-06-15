@@ -29,6 +29,14 @@
 		22EB68312A2F77F0005E00F4 /* AuthApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB682C2A2F77F0005E00F4 /* AuthApiService.swift */; };
 		22EB68322A2F77F0005E00F4 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB682E2A2F77F0005E00F4 /* AuthRepository.swift */; };
 		22EB68422A2F8C44005E00F4 /* TestLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68412A2F8C44005E00F4 /* TestLoginPresenter.swift */; };
+		22EB68452A30B21B005E00F4 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68442A30B21B005E00F4 /* AuthRouter.swift */; };
+		22EB68472A30BB22005E00F4 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68462A30BB22005E00F4 /* RegisterPresenter.swift */; };
+		22EB68492A30BC17005E00F4 /* RegisterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68482A30BC17005E00F4 /* RegisterEntity.swift */; };
+		22EB686E2A334A9F005E00F4 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB686D2A334A9F005E00F4 /* UserDefaultHelper.swift */; };
+		22EB68712A3354D4005E00F4 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68702A3354D4005E00F4 /* AuthHelper.swift */; };
+		22EB68752A335A2A005E00F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68732A335A2A005E00F4 /* HomeViewController.swift */; };
+		22EB68762A335A2A005E00F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB68742A335A2A005E00F4 /* HomeViewController.xib */; };
+		22EB68782A336ACC005E00F4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB68772A336ACC005E00F4 /* HomePresenter.swift */; };
 		B56A00B5ADCA92F5625439FE /* Pods_PostsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41125E7B6561BC9ABF65C21 /* Pods_PostsApp.framework */; };
 		DAB7C3D5E00586B159AA9BB2 /* PostsAppTests-PostsAppMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */; };
 		E03602930B73C22219532EAE /* Pods_PostsApp_PostsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893C6FE02AC0DFCB3BA317E2 /* Pods_PostsApp_PostsAppTests.framework */; };
@@ -71,13 +79,21 @@
 		22EB68372A2F78D7005E00F4 /* PostsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB68402A2F8C43005E00F4 /* PostsAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PostsAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		22EB68412A2F8C44005E00F4 /* TestLoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLoginPresenter.swift; sourceTree = "<group>"; };
+		22EB68442A30B21B005E00F4 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		22EB68462A30BB22005E00F4 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		22EB68482A30BC17005E00F4 /* RegisterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntity.swift; sourceTree = "<group>"; };
+		22EB686D2A334A9F005E00F4 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		22EB68702A3354D4005E00F4 /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		22EB68732A335A2A005E00F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		22EB68742A335A2A005E00F4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		22EB68772A336ACC005E00F4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		2BEAE9234010F7B842812AAA /* Pods-PostsApp-PostsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp-PostsAppTests.release.xcconfig"; path = "Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C0F60B60A2BD5F4752947CC /* Pods-PostsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp.release.xcconfig"; path = "Target Support Files/Pods-PostsApp/Pods-PostsApp.release.xcconfig"; sourceTree = "<group>"; };
 		6552686EDB4B328076D4D453 /* Pods-PostsApp-PostsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp-PostsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		893C6FE02AC0DFCB3BA317E2 /* Pods_PostsApp_PostsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsApp_PostsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41125E7B6561BC9ABF65C21 /* Pods_PostsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17FE08878517439B3FCC7CE /* Pods-PostsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsApp.debug.xcconfig"; path = "Target Support Files/Pods-PostsApp/Pods-PostsApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "PostsAppTests-PostsAppMocks.generated.swift"; path = "MockingbirdMocks/PostsAppTests-PostsAppMocks.generated.swift"; sourceTree = "<group>"; };
+		E6C02F46F0F4C442840640BE /* PostsAppTests-PostsAppMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "PostsAppTests-PostsAppMocks.generated.swift"; path = "MockingbirdMocks/PostsAppTests-PostsAppMocks.generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +140,10 @@
 		22EB67F62A2F74BE005E00F4 /* PostsApp */ = {
 			isa = PBXGroup;
 			children = (
+				22EB686C2A334A84005E00F4 /* helper */,
+				22EB68432A30B12E005E00F4 /* network */,
 				22EB68272A2F77F0005E00F4 /* entities */,
 				22EB682D2A2F77F0005E00F4 /* repositories */,
-				22EB682B2A2F77F0005E00F4 /* services */,
 				22EB68292A2F77F0005E00F4 /* views */,
 				22EB680E2A2F7698005E00F4 /* screens */,
 				22EB67F72A2F74BE005E00F4 /* AppDelegate.swift */,
@@ -144,6 +161,7 @@
 		22EB680E2A2F7698005E00F4 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				22EB68722A335A0E005E00F4 /* home */,
 				22EB681E2A2F77B4005E00F4 /* login */,
 				22EB681B2A2F77B4005E00F4 /* register */,
 				22EB680F2A2F76E4005E00F4 /* tutorial */,
@@ -176,6 +194,7 @@
 			children = (
 				22EB681C2A2F77B4005E00F4 /* RegisterViewController.xib */,
 				22EB681D2A2F77B4005E00F4 /* RegisterViewController.swift */,
+				22EB68462A30BB22005E00F4 /* RegisterPresenter.swift */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -194,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				22EB68282A2F77F0005E00F4 /* LoginEntity.swift */,
+				22EB68482A30BC17005E00F4 /* RegisterEntity.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -206,12 +226,13 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		22EB682B2A2F77F0005E00F4 /* services */ = {
+		22EB682B2A2F77F0005E00F4 /* authservice */ = {
 			isa = PBXGroup;
 			children = (
 				22EB682C2A2F77F0005E00F4 /* AuthApiService.swift */,
+				22EB68442A30B21B005E00F4 /* AuthRouter.swift */,
 			);
-			path = services;
+			path = authservice;
 			sourceTree = "<group>";
 		};
 		22EB682D2A2F77F0005E00F4 /* repositories */ = {
@@ -229,6 +250,33 @@
 				22EB68402A2F8C43005E00F4 /* PostsAppTests-Bridging-Header.h */,
 			);
 			path = PostsAppTests;
+			sourceTree = "<group>";
+		};
+		22EB68432A30B12E005E00F4 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				22EB682B2A2F77F0005E00F4 /* authservice */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		22EB686C2A334A84005E00F4 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				22EB686D2A334A9F005E00F4 /* UserDefaultHelper.swift */,
+				22EB68702A3354D4005E00F4 /* AuthHelper.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		22EB68722A335A0E005E00F4 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				22EB68732A335A2A005E00F4 /* HomeViewController.swift */,
+				22EB68742A335A2A005E00F4 /* HomeViewController.xib */,
+				22EB68772A336ACC005E00F4 /* HomePresenter.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		4AD594DFB62B29F2BDFA79C0 /* Pods */ = {
@@ -353,6 +401,7 @@
 				22EB67FF2A2F74BE005E00F4 /* Main.storyboard in Resources */,
 				22EB68242A2F77B4005E00F4 /* LoginViewController.xib in Resources */,
 				22EB68222A2F77B4005E00F4 /* RegisterViewController.xib in Resources */,
+				22EB68762A335A2A005E00F4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,13 +445,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp/Pods-PostsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp/Pods-PostsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -433,13 +478,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PostsApp-PostsAppTests/Pods-PostsApp-PostsAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -475,20 +516,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EB68782A336ACC005E00F4 /* HomePresenter.swift in Sources */,
 				22EB68252A2F77B4005E00F4 /* LoginViewController.swift in Sources */,
 				22EB67FC2A2F74BE005E00F4 /* ViewController.swift in Sources */,
 				22EB68192A2F76E4005E00F4 /* TutorialViewController.swift in Sources */,
 				22EB68182A2F76E4005E00F4 /* TutorialCell.swift in Sources */,
+				22EB68712A3354D4005E00F4 /* AuthHelper.swift in Sources */,
 				22EB68262A2F77B4005E00F4 /* LoginPresenter.swift in Sources */,
 				22EB68232A2F77B4005E00F4 /* RegisterViewController.swift in Sources */,
 				22EB67F82A2F74BE005E00F4 /* AppDelegate.swift in Sources */,
+				22EB68452A30B21B005E00F4 /* AuthRouter.swift in Sources */,
+				22EB68492A30BC17005E00F4 /* RegisterEntity.swift in Sources */,
 				22EB68302A2F77F0005E00F4 /* UIInputText.swift in Sources */,
+				22EB686E2A334A9F005E00F4 /* UserDefaultHelper.swift in Sources */,
 				22EB67FA2A2F74BE005E00F4 /* SceneDelegate.swift in Sources */,
 				22EB68022A2F74BE005E00F4 /* PostsApp.xcdatamodeld in Sources */,
 				22EB68312A2F77F0005E00F4 /* AuthApiService.swift in Sources */,
+				22EB68752A335A2A005E00F4 /* HomeViewController.swift in Sources */,
 				22EB68322A2F77F0005E00F4 /* AuthRepository.swift in Sources */,
 				22EB68162A2F76E4005E00F4 /* TutorialCellDelegate.swift in Sources */,
 				22EB682F2A2F77F0005E00F4 /* LoginEntity.swift in Sources */,
+				22EB68472A30BB22005E00F4 /* RegisterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
