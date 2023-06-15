@@ -22,7 +22,7 @@ class HomePresenterImpl : HomePresenter {
     
     func logout(accessToken: String) {
         homeDelegate.onStartLogout()
-        authRepository.logout(accessToken: AuthHelper.shared.accessToken) {
+        authRepository.logout(accessToken: accessToken) {
             self.homeDelegate.onLogoutSuccess()
         } failure: { error in
             self.homeDelegate.onLogoutFailure(error: error)

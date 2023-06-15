@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -79,14 +80,15 @@
                         <action selector="onForgotPasswordClicked:" destination="-1" eventType="touchUpInside" id="Fwh-5x-DoA"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF9-aG-Xso">
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF9-aG-Xso">
                     <rect key="frame" x="40" y="558.33333333333337" width="313" height="51"/>
+                    <color key="backgroundColor" red="0.3069834709" green="0.66980260609999998" blue="0.92159914970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <color key="tintColor" red="0.3069844544" green="0.67782813310000001" blue="0.92159861330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Login">
-                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Login"/>
                     <connections>
+                        <action selector="onButtonLoginTouchDown:" destination="-1" eventType="touchDown" id="Nky-C8-4Hd"/>
                         <action selector="onLoginClicked:" destination="-1" eventType="touchUpInside" id="JbX-9X-5Lx"/>
                     </connections>
                 </button>
@@ -112,7 +114,7 @@
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password is require" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-2j-ept">
-                    <rect key="frame" x="50" y="489" width="110" height="0.0"/>
+                    <rect key="frame" x="40" y="489" width="110" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="height" id="fac-mu-KQf"/>
                     </constraints>
@@ -121,7 +123,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username is require" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rup-ou-IR0">
-                    <rect key="frame" x="50.000000000000007" y="421" width="113.66666666666669" height="0.0"/>
+                    <rect key="frame" x="40.000000000000007" y="421" width="113.66666666666669" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="height" id="kgi-ni-diR"/>
                     </constraints>
@@ -162,13 +164,13 @@
                 <constraint firstAttribute="bottom" secondItem="OZ8-gy-yYo" secondAttribute="bottom" id="NIf-xC-Yc3"/>
                 <constraint firstItem="Nvx-Wt-j5x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QO6-2h-Qj5"/>
                 <constraint firstItem="fIN-2j-ept" firstAttribute="top" secondItem="voh-rc-ZTM" secondAttribute="bottom" constant="8" symbolic="YES" id="Sym-bG-oqv"/>
-                <constraint firstItem="Rup-ou-IR0" firstAttribute="leading" secondItem="oeb-Lg-fke" secondAttribute="leading" constant="10" id="WNy-vf-N4g"/>
+                <constraint firstItem="Rup-ou-IR0" firstAttribute="leading" secondItem="oeb-Lg-fke" secondAttribute="leading" id="WNy-vf-N4g"/>
                 <constraint firstItem="OZ8-gy-yYo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZL1-X3-nYj"/>
                 <constraint firstItem="Nvx-Wt-j5x" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="ZrB-6m-aIb"/>
                 <constraint firstItem="oeb-Lg-fke" firstAttribute="top" secondItem="FAd-v2-xTM" secondAttribute="bottom" constant="30" id="flE-uy-RTf"/>
                 <constraint firstItem="gaT-LQ-UAv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="hWM-HJ-Phz"/>
                 <constraint firstItem="KF9-aG-Xso" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="i6S-3c-9CO"/>
-                <constraint firstItem="fIN-2j-ept" firstAttribute="leading" secondItem="voh-rc-ZTM" secondAttribute="leading" constant="10" id="kd6-cM-iGF"/>
+                <constraint firstItem="fIN-2j-ept" firstAttribute="leading" secondItem="voh-rc-ZTM" secondAttribute="leading" id="kd6-cM-iGF"/>
                 <constraint firstItem="gaT-LQ-UAv" firstAttribute="top" secondItem="fIN-2j-ept" secondAttribute="bottom" constant="15" id="lSx-Fj-Axb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="voh-rc-ZTM" secondAttribute="trailing" constant="40" id="muL-sz-NzE"/>
                 <constraint firstItem="FAd-v2-xTM" firstAttribute="top" secondItem="Nvx-Wt-j5x" secondAttribute="bottom" constant="60" id="nMU-tX-LX0"/>

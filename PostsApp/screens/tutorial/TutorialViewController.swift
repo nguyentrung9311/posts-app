@@ -28,6 +28,7 @@ class TutorialViewController: UIViewController, TutorialCellDelegate {
         
         cvTutorial.isPagingEnabled = true
         cvTutorial.showsHorizontalScrollIndicator = false
+        cvTutorial.contentInsetAdjustmentBehavior = .never
         
         cvTutorial.register(UINib.init(nibName: TutorialCell.cellId, bundle: nil), forCellWithReuseIdentifier: TutorialCell.cellId)
     }
@@ -35,20 +36,13 @@ class TutorialViewController: UIViewController, TutorialCellDelegate {
     func onSkipClicked(_ index: IndexPath) {
         let indexPath = IndexPath(row: index.row + 1, section: 0)
         if indexPath.row < 3 {
-            cvTutorial.scrollRectToVisible(CGRect(x: view.bounds.width * CGFloat(indexPath.row), y: 0, width: view.bounds.width, height: view.bounds.height), animated: true)
+            cvTutorial.scrollRectToVisible(CGRect(x: view.bounds.width * CGFloat(indexPath.row), y: 0, width: view.bounds.width, height: UIScreen.main.bounds.height), animated: true)
         } else {
             UserDefaultHelper.shared.tutorialCompleted = true
             
             let loginVC = LoginViewController()
             
-            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
-            window?.rootViewController = loginVC
-            window?.makeKeyAndVisible()
-            
-//            let nav = UINavigationController(rootViewController: loginVC)
-            
-//            loginVC.modalPresentationStyle = .fullScreen
-//            present(loginVC, animated: true)
+            navigationController?.pushViewController(loginVC, animated: true)
         }
     }
 }

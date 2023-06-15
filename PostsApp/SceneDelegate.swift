@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var rootVC: UIViewController!
         if(UserDefaultHelper.shared.tutorialCompleted) {
             if AuthHelper.shared.isLogged() {
-                rootVC = HomeViewController()
+                rootVC = MainTabBarViewController()
             } else {
                 rootVC = LoginViewController()
             }
@@ -32,7 +32,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootVC = TutorialViewController()
         }
         
-        window?.rootViewController = rootVC
+        let nav = UINavigationController(rootViewController: rootVC)
+        nav.setNavigationBarHidden(true, animated: false)
+        
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
 

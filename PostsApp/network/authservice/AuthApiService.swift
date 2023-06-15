@@ -23,7 +23,7 @@ protocol AuthApiService {
         failure: ((String?) -> Void)?
     )
     
-    func logout(token: String, success: (() -> Void)?, failure: ((String?) -> Void)?)
+    func logout(accessToken: String, success: (() -> Void)?, failure: ((String?) -> Void)?)
 }
 
 class AuthApiServiceImpl: AuthApiService {
@@ -58,8 +58,8 @@ class AuthApiServiceImpl: AuthApiService {
         }
     }
     
-    func logout(token: String, success: (() -> Void)?, failure: ((String?) -> Void)?) {
-        AF.request(AuthRouter.logout).validate(statusCode: 200 ... 300).response { response in
+    func logout(accessToken: String, success: (() -> Void)?, failure: ((String?) -> Void)?) {
+        AF.request(AuthRouter.logout(accessToken: accessToken)).validate(statusCode: 200 ... 300).response { response in
             switch response.result {
             case .success(_):
                 success?()

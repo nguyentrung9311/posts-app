@@ -40,6 +40,7 @@ class RegisterViewController: UIViewController {
         registerPresenter = RegisterPresenterIml(controller: self, authRepository: authRepository)
 
         btRegister.tintColor = #colorLiteral(red: 0.01795377955, green: 0.6841192842, blue: 0.9446069598, alpha: 1)
+        btRegister.layer.cornerRadius = 5
     }
     
     @IBAction func onUsernameChanged(_ sender: Any) {
@@ -55,11 +56,16 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func onLoginClicked(_ sender: Any) {
-        dismiss(animated: true)
+        btRegister.layer.opacity = 1
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func onButtonRegisterTouchDown(_ sender: Any) {
+        btRegister.layer.opacity = 0.8
     }
     
     @IBAction func onBackClicked(_ sender: Any) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onRegisterClicked(_ sender: Any) {
@@ -104,9 +110,10 @@ extension RegisterViewController: RegisterDisplay {
         print("Register success")
         if let accessToken = registerEntity.accessToken, !accessToken.isEmpty {
             AuthHelper.shared.accessToken = accessToken
-            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
-            window?.rootViewController = HomeViewController()
-            window?.makeKeyAndVisible()
+            navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+//            let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+//            window?.rootViewController = HomeViewController()
+//            window?.makeKeyAndVisible()
         } else {
             AuthHelper.shared.accessToken = ""
         }

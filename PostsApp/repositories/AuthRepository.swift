@@ -41,7 +41,7 @@ class AuthRepositoryImpl: AuthRepository {
     }
     
     func logout(accessToken: String, success: (() -> Void)?, failure: ((String?) -> Void)?) {
-        authApiService.logout(token: accessToken, success: success, failure: failure)
+        authApiService.logout(accessToken: accessToken, success: success, failure: failure)
     }
 }
 
